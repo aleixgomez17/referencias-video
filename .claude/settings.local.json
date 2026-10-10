@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp /root/.claude/uploads/86f64658-5514-5213-a235-edfdb485d49b/39a68e30-image.png top-cruzado/img3_beige_espalda.png)",
+      "Bash(git add *)",
+      "Bash(git -c user.name=Claude -c user.email=noreply@anthropic.com commit -qm 'Replace beige back reference with image showing back closure *)",
+      "Bash(git push *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} %{size_download}\\\\n\" https://raw.githubusercontent.com/aleixgomez17/referencias-video/main/top-cruzado/img3_beige_espalda.png)"
+    ]
+  }
+}
