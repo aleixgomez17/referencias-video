@@ -7,7 +7,7 @@ Plantillas reales que dieron buen resultado. Copiar, cambiar lo que va entre [co
 ## A. Cambiar el producto en un vídeo real (misma persona)
 
 **Modelo:** `seedance-2.0` · **Imágenes:** 1 = producto de frente, 2 = producto de espalda · **Vídeo:** trozo de ≤ 8 s
-**Usado en:** 01-top-negro (trozo B) · **Coste:** ~0,86 $ por 5 s
+**Usado en:** top-negro (trozo B) · **Coste:** ~0,86 $ por 5 s
 
 ```
 Replace the bra the woman is wearing in video 1 with the top from image 1 and image 2, in [BLACK]. Front view must look like image 1: [seamless smooth scoop V-neck, wide straps, and a straight wide band under the bust with a small hook-and-eye panel in the center front]. Back view must look like image 2: [racerback with a large U-shaped cutout above a wide lower band with a small hook closure]. The top is [black] in every shot. Keep everything else from video 1 unchanged: the same woman, face, hair, movements, hands, camera, room, lighting and timing.
@@ -16,7 +16,7 @@ Replace the bra the woman is wearing in video 1 with the top from image 1 and im
 ## B. Cambiar a la persona por un avatar + cambiar color del producto
 
 **Modelo:** `seedance-2.0-face` · **Imágenes:** 1 = cara del avatar (solo cara), 2 = foto extra del avatar · **Vídeo:** ≤ 15 s
-**Usado en:** 03-salón · **Coste:** ~2,23 $ por 13 s
+**Usado en:** salón · **Coste:** ~2,23 $ por 13 s
 
 ```
 Replace the woman in video 1 with the woman from image 1 and image 2. She performs EXACTLY the same movements as the woman in video 1: same body motion, same hand and arm movements, same head turns, same timing. Her face, hair and body are from image 1 and image 2: [a 40-year-old Spanish woman with shoulder-length wavy dark brown hair, brown eyes, natural light olive skin with real texture]. Change only one more thing: every time the [leopard-print top] appears, it becomes a plain solid [BLACK] top with exactly the same shape as in video 1. Everything else stays exactly as in video 1: [trousers], the room, the lighting, the camera framing and the timing. No watermarks, no logos, no on-screen text.
@@ -25,7 +25,7 @@ Replace the woman in video 1 with the woman from image 1 and image 2. She perfor
 ## C. Cambiar la cara cuando el avatar se parece a la chica original
 
 **Modelo:** `seedance-2.0-face` · **Imágenes:** 1 = fotograma de la cara ya generada (para mantener la misma cara), 2 = foto del avatar
-**Usado en:** 04-jardín (trozo C v2) · **Coste:** ~0,69 $ por 4 s
+**Usado en:** jardín (trozo C v2) · **Coste:** ~0,69 $ por 4 s
 
 ```
 Replace the woman in video 1 with the woman from image 1 and image 2. Image 1 shows exactly the face she must have: copy this exact face, same facial features, same eyes, eyebrows, nose, smile and skin, so she looks like the same person. Image 2 is extra reference of the same woman. She is about [40] years old, [Spanish, brown eyes, NO fringe and NO bangs]. Do not keep the young woman's face from video 1. Her hair is [tied up with a white claw clip], exactly as in video 1. She performs the same movements as in video 1: [describe brevemente el gesto]. Same [clothes], [place] and camera framing. No watermarks, no logos, no on-screen text.
