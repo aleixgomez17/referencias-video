@@ -39,6 +39,7 @@ Reglas sacadas de pruebas reales del equipo. Antes de lanzar una generación, re
 - **Solución que funciona:** cortar el vídeo en trozos por cambios de plano y **que cada trozo empiece con el plano importante** (el de frente, el que enseña la cara o el producto).
 - Para cada trozo, dar las referencias que le tocan: foto de frente para planos de frente, foto de espalda para planos de espalda.
 - **Inconveniente:** entre trozos puede cambiar algo (color del pantalón, la habitación, la cara). Se evita describiendo esos elementos igual en todos los prompts y, para la cara, ver el punto 5.
+  ⚠️ (Victor, 2026-10-12, tanga-avatar-rubia): con `seedance-2.0-face` un vídeo de 14 s y 9 planos salió bien **en una sola pasada** (2,40 $) usando una foto solo de cara y un prompt que dice "Replace the woman… in EVERY shot of the video, from the first frame to the last, including the back views" + "her hair is BLONDE in every shot, also when seen from behind" + "She is NOT the dark-haired woman from video 1". Puede que la clave sea insistir en *cada plano*. Falta otra prueba que lo confirme.
 
 ## 4. Límites técnicos de Seedance (vía APIMart)
 
