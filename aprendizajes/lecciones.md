@@ -71,6 +71,7 @@ Reglas sacadas de pruebas reales del equipo. Antes de lanzar una generación, re
 - Quitar un plano malo y reajustar la velocidad para no cortar el audio.
 - Borrar una franja o borde pixelado en la tela de un plano concreto.
 - Poner textos, el audio original, recortar a 9:16, quitar la pantalla final de TikTok.
+- **Borrar detalles pequeños oscuros del producto** (p. ej. anillas o cordones laterales sobre fondo claro): detectar las líneas negras finas pegadas al top y rellenarlas con *inpainting* de OpenCV fotograma a fotograma. Quedó limpio y sin parpadeo; solo quedan los puntos de enganche, muy pequeños. Script: `proyectos/2026-10-13_xavi_morena-avatar-rubia45/trozos/quitar_anillas.py`. *(Xavi, 2026-10-13, morena-avatar-rubia45)*
 
 ## 8. Antes de entregar un vídeo
 
