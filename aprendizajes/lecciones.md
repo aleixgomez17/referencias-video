@@ -31,6 +31,7 @@ Reglas sacadas de pruebas reales del equipo. Antes de lanzar una generación, re
 - **Describe el producto tal como se ve PUESTO**, no mientras se lo ponen. Error que tuvimos: escribimos "banda cruzada en X" y el top abrochado en realidad es una banda recta con corchetes en el centro. *(top-negro)*
 - **Indica el color en cada prenda y en cada momento**: "the top is BLACK in every shot", "loose light grey trousers, the same light grey in every shot". *(leopardo)*
 - **Tono de piel**: si no lo dices, puede salir muy bronceada → "fair, light natural skin, NOT tanned, real skin texture, no airbrushed look". *(leopardo)*
+- **Las órdenes en negativo no quitan lo que está en el vídeo de referencia.** Con `seedance-2.0-face` pedimos "the top has NO loops or cords at the sides" y "mouth closed, she does NOT talk": salió idéntico (anillas y boca hablando copiadas del original). Los gestos de boca y los detalles pequeños del producto se heredan del vídeo. *(Xavi, 2026-10-13, morena-avatar-rubia45: 2,58 $ perdidos)*
 - Pide siempre: "No watermarks, no logos, no on-screen text". Los textos los ponemos después en edición (la IA los deforma).
 
 ## 3. Vídeos con varios planos → trocear
