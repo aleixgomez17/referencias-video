@@ -1,0 +1,46 @@
+name: Transcribir audio
+on:
+  push:
+    paths:
+      - 'sistema/transcribir/*.mp3'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  transcribir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Instalar Whisper
+        run: pip install faster-whisper==1.0.3
+      - name: Transcribir pendientes
+        run: |
+          python - <<'PY'
+          import glob, os, json
+          from faster_whisper import WhisperModel
+          model = WhisperModel("small", device="cpu", compute_type="int8")
+          for f in sorted(glob.glob("sistema/transcribir/*.mp3")):
+              out = f[:-4] + ".txt"
+              if os.path.exists(out):
+                  continue
+              segs, info = model.transcribe(f, word_timestamps=True, vad_filter=False)
+              lines = [f"# idioma: {info.language}"]
+              words = []
+              for s in segs:
+                  lines.append(f"[{s.start:6.2f} - {s.end:6.2f}] {s.text.strip()}")
+                  for w in (s.words or []):
+                      words.append({"start": round(w.start, 2), "end": round(w.end, 2), "word": w.word})
+              open(out, "w").write("\n".join(lines) + "\n")
+              json.dump(words, open(f[:-4] + "_palabras.json", "w"), ensure_ascii=False, indent=0)
+          PY
+      - name: Guardar
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add sistema/transcribir
+          git diff --cached --quiet || git commit -m "Transcripciones"
+          git pull --rebase
+          git push
