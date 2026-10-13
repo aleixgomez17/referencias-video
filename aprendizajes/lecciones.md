@@ -73,6 +73,9 @@ Reglas sacadas de pruebas reales del equipo. Antes de lanzar una generación, re
 - Poner textos, el audio original, recortar a 9:16, quitar la pantalla final de TikTok.
 - **Borrar detalles pequeños oscuros del producto** (p. ej. anillas o cordones laterales sobre fondo claro): detectar las líneas negras finas pegadas al top y rellenarlas con *inpainting* de OpenCV fotograma a fotograma. Quedó limpio y sin parpadeo; solo quedan los puntos de enganche, muy pequeños. Script: `proyectos/2026-10-13_xavi_morena-avatar-rubia45/trozos/quitar_anillas.py`. *(Xavi, 2026-10-13, morena-avatar-rubia45)*
 
+- **Transcribir lo que dice un vídeo** (para saber dónde cortar): subir el audio en mp3 a `sistema/transcribir/<persona>_<nombre>.mp3` y hacer push. GitHub lo transcribe solo con Whisper en ~1 min y deja `<nombre>.txt` (frases con tiempos) y `<nombre>_palabras.json` (cada palabra con su tiempo). Después mover todo a `sistema/transcribir/archivo/`. (Aleix, 2026-10-13, tiktok-pecho-caido)
+- **Cortar frases de un vídeo:** cortar con los tiempos de palabra y dejar ~0,08 s de margen después del final de la palabra anterior; si no, se cuela una sílaba ("si no se te va…"). Volver a transcribir el corte para comprobar que se entiende. (Aleix, 2026-10-13, tiktok-pecho-caido)
+
 ## 8. Antes de entregar un vídeo
 
 1. Sacar fotogramas cada ~0,5 s y compararlos con el original.

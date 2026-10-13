@@ -22,6 +22,9 @@ Repositorio **compartido por un equipo de 4 personas**, cada una con su propio C
 - En `aprendizajes/` solo se **añade**: filas nuevas al final del registro, lecciones nuevas con `(persona, fecha, proyecto)`. Nunca borrar lo que escribió otro; si una prueba lo contradice, añadir una nota `⚠️` debajo (ver cabecera de `lecciones.md`).
 - Mensajes de commit que empiecen por el nombre de la persona: `"[Aleix] Añade trozo B del proyecto jardín"`.
 
+## Transcribir audio
+- Para saber qué dice un vídeo: subir el mp3 a `sistema/transcribir/<persona>_<nombre>.mp3`, push, esperar ~1 min, pull. Aparecen `.txt` y `_palabras.json` con tiempos. Luego mover a `sistema/transcribir/archivo/`.
+
 ## Después de cada generación
 - Revisar fotograma a fotograma antes de entregar (caras, cortes entre trozos, colores).
 - Añadir una fila a `aprendizajes/registro-generaciones.md`.
