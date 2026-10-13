@@ -65,6 +65,7 @@ Reglas sacadas de pruebas reales del equipo. Antes de lanzar una generación, re
 - Siempre **una foto de frente y una de espalda**, del producto puesto, en el color que queremos.
 - **Quitar flechas, textos o gráficos** de las fotos: la IA los pega en el vídeo tal cual. *(top-negro: salió la imagen con flechas incrustada)*
 - Que en la foto se vea el detalle que importa (p. ej. el cierre de la espalda).
+- **Recortar las fotos de producto para que solo se vea la prenda.** Si en la foto la modelo lleva vaqueros o hay una habitación de fondo, la IA mete esos vaqueros y esa habitación en el vídeo. Usar `beige_frente_recorte.png` / `beige_espalda_recorte.png`. (Aleix, 2026-10-13, tiktok-pecho-caido)
 
 ## 7. Retoques que se hacen sin IA (gratis)
 
