@@ -40,6 +40,7 @@ Reglas sacadas de pruebas reales del equipo. Antes de lanzar una generación, re
 - Para cada trozo, dar las referencias que le tocan: foto de frente para planos de frente, foto de espalda para planos de espalda.
 - **Inconveniente:** entre trozos puede cambiar algo (color del pantalón, la habitación, la cara). Se evita describiendo esos elementos igual en todos los prompts y, para la cara, ver el punto 5.
   ⚠️ (Victor, 2026-10-12, tanga-avatar-rubia): con `seedance-2.0-face` un vídeo de 14 s y 9 planos salió bien **en una sola pasada** (2,40 $) usando una foto solo de cara y un prompt que dice "Replace the woman… in EVERY shot of the video, from the first frame to the last, including the back views" + "her hair is BLONDE in every shot, also when seen from behind" + "She is NOT the dark-haired woman from video 1". Puede que la clave sea insistir en *cada plano*. Falta otra prueba que lo confirme.
+  ✔️ confirmado en parte (Xavi, 2026-10-13, morena-avatar-rubia45): con el mismo enfoque ("in EVERY frame, from the first frame to the last, including when the top covers part of her face and when her face is partly out of frame") el avatar aguantó los 15 s de una pasada (2,58 $), incluso cambiando de pelo corto castaño a largo rubio. Pero mi vídeo era **un solo plano sin cortes**, así que no confirma del todo el caso de varios planos.
 
 ## 4. Límites técnicos de Seedance (vía APIMart)
 
@@ -48,6 +49,8 @@ Reglas sacadas de pruebas reales del equipo. Antes de lanzar una generación, re
 - Si un trozo dura menos de 1,8 s: **alargarlo congelando el último fotograma** (`tpad`) hasta 4 s, generar, y luego quedarnos solo con la parte buena. *(jardín)*
 - La salida casi nunca dura exactamente lo mismo que la referencia: se reajusta la velocidad en el montaje.
 - `generate_audio: false` y **poner el audio original nosotros** en el montaje. (La opción de conservar audio da error en la conexión.)
+- Si la referencia dura un poco más de 15 s (p. ej. 16 s), **acelerarla un poco** (`setpts=PTS*15/16`) en vez de cortar, generar 15 s y en el montaje **devolverla a su velocidad** (`setpts=PTS*16/15`) con el audio original: quedó perfectamente sincronizado y no se pierde nada. *(Xavi, 2026-10-13, morena-avatar-rubia45)*
+- Seedance lee las imágenes directamente desde la URL `raw.githubusercontent.com` del repo, sin pasar por `upload_image`. **El repo tiene que ser público**: si está en privado, APIMart no puede leer nada. *(Xavi, 2026-10-13, morena-avatar-rubia45)*
 
 ## 5. Avatares y caras
 

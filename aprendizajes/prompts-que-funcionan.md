@@ -38,3 +38,12 @@ Replace the woman in video 1 with the woman from image 1 and image 2. Image 1 sh
 ```
 Candid smartphone photo of a real [40]-year-old [Spanish] woman from [Madrid], head-and-shoulders portrait looking at the camera with a soft natural half smile. [Mediterranean features], skin with real texture: visible pores, a few freckles, subtle fine lines around the eyes and mouth, no makeup except a little mascara. [Shoulder-length wavy dark brown hair], slightly messy, natural. Wearing a plain beige fitted cotton tank top. Shot on an iPhone front camera, soft natural window daylight, slightly blurred home background. Realistic UGC look, unretouched, natural colors, no beauty filter, no studio lighting, no glamour, not a model.
 ```
+
+## E. Cambiar a la persona por un avatar en un vídeo de un solo plano (incluye cambio de pelo)
+
+**Modelo:** `seedance-2.0-face` · **Imágenes:** 1 = cara del avatar recortada sin fondo, 2 = foto entera del avatar · **Vídeo:** ≤ 15 s, un plano
+**Usado en:** morena-avatar-rubia45 (Xavi) · **Coste:** ~2,58 $ por 15 s
+
+```
+Replace the woman in video 1 with the woman from image 1 and image 2, in EVERY frame of the video, from the first frame to the last, including when [the top covers part of her face] and when her face is partly out of frame. She is about [45] years old, with [long straight dark-blonde hair with lighter highlights falling past her shoulders, hazel-green eyes], light natural skin with real texture and fine lines, NOT tanned. She is NOT [the young woman with the short brown bob] from video 1: her hair is [LONG and BLONDE] in every frame. She performs the same movements as in video 1, [puts on the same black top in the same way], and has the same hands, jewellery and [jeans]. Same room, lighting, camera framing and timing. The top is [BLACK] in every frame. No watermarks, no logos, no on-screen text.
+```
