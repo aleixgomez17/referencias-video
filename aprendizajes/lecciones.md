@@ -51,6 +51,8 @@ Reglas sacadas de pruebas reales del equipo. Antes de lanzar una generación, re
 - La salida casi nunca dura exactamente lo mismo que la referencia: se reajusta la velocidad en el montaje.
 - `generate_audio: false` y **poner el audio original nosotros** en el montaje. (La opción de conservar audio da error en la conexión.)
 - Si la referencia dura un poco más de 15 s (p. ej. 16 s), **acelerarla un poco** (`setpts=PTS*15/16`) en vez de cortar, generar 15 s y en el montaje **devolverla a su velocidad** (`setpts=PTS*16/15`) con el audio original: quedó perfectamente sincronizado y no se pierde nada. *(Xavi, 2026-10-13, morena-avatar-rubia45)*
+- Las imágenes de referencia deben medir **al menos 300 px de ancho** (y como máximo 6000). Si un recorte de cara sale más pequeño, ampliarlo (p. ej. a 500 px) antes de subirlo; si no, la tarea falla (sin coste). *(Xavi, 2026-10-14, sujetador-definitivo)*
+- Acelerar ×1,19 (17,8 s → 15 s) y devolver la velocidad en el montaje también sincronizó bien. *(Xavi, 2026-10-14, sujetador-definitivo)*
 - Seedance lee las imágenes directamente desde la URL `raw.githubusercontent.com` del repo, sin pasar por `upload_image`. **El repo tiene que ser público**: si está en privado, APIMart no puede leer nada. *(Xavi, 2026-10-13, morena-avatar-rubia45)*
 
 ## 5. Avatares y caras
@@ -72,6 +74,7 @@ Reglas sacadas de pruebas reales del equipo. Antes de lanzar una generación, re
 - Quitar un plano malo y reajustar la velocidad para no cortar el audio.
 - Borrar una franja o borde pixelado en la tela de un plano concreto.
 - Poner textos, el audio original, recortar a 9:16, quitar la pantalla final de TikTok.
+- **Vídeos con texto incrustado (TikTok):** borrar el texto y las flechas de la referencia antes de generar (script `proyectos/2026-10-14_xavi_sujetador-definitivo-avatar-morena/trozos/quitar_texto.py`). La flecha desapareció del todo, pero **la IA copia la mancha borrosa** donde estaba el texto. Solución gratis: volver a poner el mismo texto encima en el montaje (fuente Inter SemiBold, blanco con contorno negro, misma posición) y la mancha queda tapada. *(Xavi, 2026-10-14, sujetador-definitivo)*
 - **Borrar detalles pequeños oscuros del producto** (p. ej. anillas o cordones laterales sobre fondo claro): detectar las líneas negras finas pegadas al top y rellenarlas con *inpainting* de OpenCV fotograma a fotograma. Quedó limpio y sin parpadeo; solo quedan los puntos de enganche, muy pequeños. Script: `proyectos/2026-10-13_xavi_morena-avatar-rubia45/trozos/quitar_anillas.py`. *(Xavi, 2026-10-13, morena-avatar-rubia45)*
 
 - **Transcribir lo que dice un vídeo** (para saber dónde cortar): subir el audio en mp3 a `sistema/transcribir/<persona>_<nombre>.mp3` y hacer push. GitHub lo transcribe solo con Whisper en ~1 min y deja `<nombre>.txt` (frases con tiempos) y `<nombre>_palabras.json` (cada palabra con su tiempo). Después mover todo a `sistema/transcribir/archivo/`. (Aleix, 2026-10-13, tiktok-pecho-caido)
