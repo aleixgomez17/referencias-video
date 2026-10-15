@@ -43,6 +43,8 @@ Reglas sacadas de pruebas reales del equipo. Antes de lanzar una generación, re
   ⚠️ (Victor, 2026-10-12, tanga-avatar-rubia): con `seedance-2.0-face` un vídeo de 14 s y 9 planos salió bien **en una sola pasada** (2,40 $) usando una foto solo de cara y un prompt que dice "Replace the woman… in EVERY shot of the video, from the first frame to the last, including the back views" + "her hair is BLONDE in every shot, also when seen from behind" + "She is NOT the dark-haired woman from video 1". Puede que la clave sea insistir en *cada plano*. Falta otra prueba que lo confirme.
   ✔️ confirmado en parte (Xavi, 2026-10-13, morena-avatar-rubia45): con el mismo enfoque ("in EVERY frame, from the first frame to the last, including when the top covers part of her face and when her face is partly out of frame") el avatar aguantó los 15 s de una pasada (2,58 $), incluso cambiando de pelo corto castaño a largo rubio. Pero mi vídeo era **un solo plano sin cortes**, así que no confirma del todo el caso de varios planos.
 
+- **Si el vídeo tiene voz, generarlo de UNA sola pasada.** Al dividirlo en trozos, cada generación pone una cara algo distinta y, como Seedance devuelve segundos enteros (p. ej. 13 s para una referencia de 12,6 s), al reajustar la duración la boca deja de ir con la voz. Solución: dejar la referencia en ≤ 16–17 s (quitando alguna frase si hace falta), acelerarla a **15 s exactos**, pedir `duration: 15` y devolverle la velocidad en el montaje. ✔️ confirma la técnica de Xavi. (Aleix, 2026-10-15, tiktok-pecho-caido)
+
 ## 4. Límites técnicos de Seedance (vía APIMart)
 
 - Vídeo de referencia: **más de 1,8 s y menos de 15,2 s**, resolución **máx. 720p** (bajar los vídeos 1080p).
