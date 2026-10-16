@@ -45,6 +45,10 @@ Reglas sacadas de pruebas reales del equipo. Antes de lanzar una generación, re
 
 - **Si el vídeo tiene voz, generarlo de UNA sola pasada.** Al dividirlo en trozos, cada generación pone una cara algo distinta y, como Seedance devuelve segundos enteros (p. ej. 13 s para una referencia de 12,6 s), al reajustar la duración la boca deja de ir con la voz. Solución: dejar la referencia en ≤ 16–17 s (quitando alguna frase si hace falta), acelerarla a **15 s exactos**, pedir `duration: 15` y devolverle la velocidad en el montaje. ✔️ confirma la técnica de Xavi. (Aleix, 2026-10-15, tiktok-pecho-caido)
 
+- **Cara "cuidada":** si la cara sale cansada o con mucha textura, retocar antes la foto del avatar con `gpt-image-2` pasándola en `image_urls` ("keep her exact identity… healthy smooth even skin, natural glow, well-rested, soft natural makeup, not plastic") y usar esa foto recortada solo a la cara como imagen 1. Ejemplo: `avatares/rubia/cara_cuidada_solo.png`. (Aleix, 2026-10-16, postura-avatar-rubia)
+- **Vídeos sin voz de más de 15 s:** se pueden hacer en 2 partes lanzadas a la vez si las dos usan **la misma foto de cara** como imagen 1 (no un fotograma generado). Las caras salieron iguales. Cortar en un cambio de plano y ajustar cada parte a una duración entera (12 s, 13 s). (Aleix, 2026-10-16, postura-avatar-rubia)
+- **Filtro de contenido de Seedance** (`OutputVideoSensitiveContentDetected`): falla sin coste. Reintentar con otra `seed` y añadiendo "fully covered, casual everyday try-on video" funcionó a la segunda. (Aleix, 2026-10-16, postura-avatar-rubia)
+
 ## 4. Límites técnicos de Seedance (vía APIMart)
 
 - Vídeo de referencia: **más de 1,8 s y menos de 15,2 s**, resolución **máx. 720p** (bajar los vídeos 1080p).
