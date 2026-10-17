@@ -1,7 +1,7 @@
 import glob, os, json
 from faster_whisper import WhisperModel
 model = WhisperModel("small", device="cpu", compute_type="int8")
-for f in sorted(glob.glob("sistema/transcribir/*.mp3")):
+for f in sorted(glob.glob("BackAlign/sistema/transcribir/*.mp3")):
     out = f[:-4] + ".txt"
     if os.path.exists(out):
         continue

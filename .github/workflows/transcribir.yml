@@ -2,8 +2,8 @@ name: Transcribir audio
 on:
   push:
     paths:
-      - 'sistema/transcribir/*.mp3'
-      - 'sistema/scripts/transcribir.py'
+      - 'BackAlign/sistema/transcribir/*.mp3'
+      - 'BackAlign/sistema/scripts/transcribir.py'
   workflow_dispatch:
 permissions:
   contents: write
@@ -21,12 +21,12 @@ jobs:
         continue-on-error: true
         run: |
           set -o pipefail
-          python sistema/scripts/transcribir.py 2>&1 | tail -40 > sistema/transcribir/ultimo_log.txt
+          python BackAlign/sistema/scripts/transcribir.py 2>&1 | tail -40 > BackAlign/sistema/transcribir/ultimo_log.txt
       - name: Guardar
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git add sistema/transcribir
+          git add BackAlign/sistema/transcribir
           git diff --cached --quiet || git commit -m "Transcripciones"
           git pull --rebase
           git push
