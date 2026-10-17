@@ -92,3 +92,5 @@ Reglas sacadas de pruebas reales del equipo. Antes de lanzar una generación, re
 2. Comparar de cerca la cara del principio, la del final y la del avatar.
 3. Revisar los cortes entre trozos (fotogramas sueltos del original, cambios de color).
 4. Decir el coste y lo que no ha salido bien.
+
+- **Si la IA se salta o resume una acción larga (p. ej. girarse y pasarse la banda por detrás), describir en el prompt las acciones en orden con "at the same moments" y hacerlo en una sola pasada de 15 s.** En A51 (2 partes, sin describir acciones) la parte 1 se adelantó 3 s e inventó un plano; en el mismo guion con otra chica, una pasada + acciones descritas salió clavado. Comparar siempre original vs generado a 1 fps antes de montar. (Aleix, 2026-10-17, a51-avatar-rubia / mujer-mayor-avatar-rubia)
