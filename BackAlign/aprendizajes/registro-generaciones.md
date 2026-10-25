@@ -64,3 +64,4 @@ Cada generación que lanza cualquiera del equipo, con su coste y lo que aprendim
 
 **Gastado por Aleix hasta 2026-10-12:** ~16,5 $ (cada uno paga con su propia cuenta de APIMart)
 **Gastado por Xavi hasta 2026-10-14:** ~7,7 $
+| 2026-10-25 | Aleix | 2026-10-25_aleix_prado-rubia | seedance-2.0-face 720p 9 s, solo imagen cara_cuidada_boca_cerrada.png, vídeo entero en 1 pasada | 1,55 $ | ✅ Cambio de morena a rubia en todos los planos (también de espaldas con pinza), boca cerrada, top y camiseta intactos, sin capa beige (escote poco profundo). Solo detalle: en el plano final pierde la pinza de flor en el pelo. |
