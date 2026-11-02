@@ -100,4 +100,6 @@ Las secciones 1 a 8 son las **lecciones comunes** a todos los proyectos, copiada
 
 ## 9. Lecciones propias de Snowbox (calendarios, planners, juegos)
 
-*(Todavía ninguna. Añadir aquí lo que vayamos aprendiendo con productos impresos.)*
+- **Cambiar los productos de una estantería de tienda por el calendario** con `seedance-2.0` (img1 = foto del calendario recortada, sin el salón) funciona en una pasada: las estanterías salen llenas de cajitas numeradas con los colores y el estilo del calendario. Pero salen **cajas sueltas** (no la estantería de madera entera) y **los números se repiten o se deforman** (13, 23 dos veces, un "5" raro). Si se ve de cerca, tapar los números en el montaje o probar con imagen→vídeo (plantilla G). *(Xavi, 2026-11-02, tienda-calendario: 0,69 $ por 4 s)*
+- **Con `seedance-2.0` normal, pedir "remove every store logo" no quitó los logos grandes de la tienda** (las dianas rojas de Target) ni "slightly different facial features" cambió a la mujer: el vídeo de referencia manda. ✔️ confirma la lección 2 (las órdenes de quitar algo del vídeo no funcionan). Para la cara usar `seedance-2.0-face` o `cambiar_solo_cara.py` (gratis). *(Xavi, 2026-11-02, tienda-calendario)*
+- Parámetros que aceptó `seedance-2.0` para vídeo vertical: `video_urls`, `image_urls`, `duration: 4`, `size: "9:16"`, `resolution: "720p"`, `generate_audio: false`. Tardó ~4 min y devolvió 4,04 s a 24 fps; se estiró a 4,13 s y se subió a 1080×1920 gratis con ffmpeg (lanczos + unsharp). *(Xavi, 2026-11-02, tienda-calendario)*
