@@ -46,3 +46,12 @@ Fotogramas: crear el final con GPT Image pasando la foto del calendario y dando 
 ```
 Image 1 is the first frame of the video. Image 2 shows the same family and the same calendar at the end of the video. Warm family home video at Christmas, filmed on a smartphone, same people, same room and same advent calendar shelf as image 1. [The girl in red reindeer pajamas takes red box number 1 off the top-left of the white calendar shelf, brings it down to her chest with both hands and lifts its lid to peek inside, like in image 2. Her brother leans in excitedly, the mother and father lean closer behind them, and all four smile and laugh together with genuine joy.] All the other numbered boxes [2 to 24] stay in their places on the shelf, unchanged. Same warm lighting, gentle slight handheld movement, natural realistic skin. No watermarks, no logos, no on-screen text.
 ```
+
+## S2. Poner nuestro producto en un vídeo real dándole el plano final ya hecho
+
+**Modelo:** `seedance-2.0` · **Vídeo:** referencia 720p 9:16 · **Imágenes:** 1 = fotograma del plano clave del vídeo editado con nuestro producto (GPT Image o hecho a mano), 2 = foto del producto recortada · `duration` = la de la referencia, `size: 9:16`, `resolution: 720p`, `generate_audio: false`
+**Usado en:** tienda-calendario v2 (Xavi, 2026-11-02) · **Coste:** 0,69 $ por 4 s
+
+```
+Edit video 1. The [store shelves on the right] are stocked with [the boxed advent calendar "Calendario de Adviento Familiar"] from image 2: [cream boxes with a dark red side, a red ribbon and a window showing a white shelf with small numbered cubes]. At the end of the video, when [the camera turns to the shelves], the final shot looks exactly like image 1: [long white shelves full of these calendar boxes standing upright side by side, front facing the aisle]. [The woman] does the same as in video 1 at the same moments: [shocked face, drops the mug, the drink splashes on the floor, she points at the shelves, then the camera pans to the shelves]. Same [store aisle], lighting and camera movement. Realistic smartphone footage. No watermarks, no on-screen text.
+```
