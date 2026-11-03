@@ -20,7 +20,7 @@ jobs:
             url=$(head -n1 "$f" | tr -d '\r')
             if ls BackAlign/sistema/descargas/"$name".* >/dev/null 2>&1; then continue; fi
             ext="mp4"; case "$url" in *.png*) ext="png";; *.jpg*|*.jpeg*) ext="jpg";; *.webp*) ext="webp";; esac
-            curl -fsSL --retry 3 -o "BackAlign/sistema/descargas/$name.$ext" "$url" || echo "fallo $name"
+            curl -fsSL --connect-timeout 20 --max-time 120 --retry 5 --retry-delay 5 --retry-all-errors -o "BackAlign/sistema/descargas/$name.$ext" "$url" || echo "fallo $name"
           done
       - name: Guardar en el repositorio
         run: |
