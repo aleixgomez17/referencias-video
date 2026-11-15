@@ -10,6 +10,7 @@ avatares/          ← avatares de IA para estos vídeos
 ## Avatares
 La primera versión (perfecta, estilo modelo) se descartó: se notaba demasiado que era IA. Receta de la versión realista: **sin imagen de referencia**, y en el prompt "candid amateur selfie, ordinary smartphone, no makeup, visible pores, blemishes, messy flyaway hair, flat window light, slight noise, not model-perfect, no retouching".
 - `avatar-rubia-real-b-frente.png` — **principal**: rubia joven, coleta suelta, camiseta blanca de cuello redondo, cuello despejado (sin collar), cara natural.
+- `avatar-rubia-real-b-solo-cara.png` — recorte de solo la cara de B (cabeza y pelo, sin ropa). Elegida por Aleix como avatar.
 - `avatar-rubia-real-a-alternativa.png` — alternativa con pelo suelto y despeinado (top con escote pronunciado).
 Coste: 0,015 $ cada una.
 
