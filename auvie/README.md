@@ -21,3 +21,6 @@ Coste: 0,015 $ cada una.
 El collar que sale en `videos-collares/collar-nombre-esmeralda-referencia.mp4` es el producto que se vende: cadena dorada fina, nombre en cursiva dorada ("Emily") y colgante de lágrima azul claro (aguamarina) engastado en dorado.
 - `producto/collar_en_mano.png` — fotograma 4,5 s recortado y ampliado x2: collar sobre la palma, nombre y colgante completos.
 - `producto/collar_en_cuello.png` — fotograma 14,5 s recortado y ampliado x2: macro sobre el cuello.
+
+## Pruebas
+- `pruebas/prueba1_avatar_sin_subtitulos_4-10s.mp4` — seedance-2.5 (edición de vídeo), tramo 4–10 s, 1,56 $. Entradas: avatar B (solo cara) + collar_en_mano + collar_en_cuello, `duration -1`, `aspect_ratio adaptive`. Prompt: sustituir a la chica por la avatar con SU tono de piel en todo lo visible, cambiar el collar por el de las imágenes, "remove ALL subtitles/captions", envases sin marcas. ✅ Quitó todos los subtítulos, cambió cara/pelo/piel y mantuvo escena y movimientos. ≈0,26 $/s.
