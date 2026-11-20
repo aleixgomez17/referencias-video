@@ -24,3 +24,6 @@ El collar que sale en `videos-collares/collar-nombre-esmeralda-referencia.mp4` e
 
 ## Pruebas
 - `pruebas/prueba1_avatar_sin_subtitulos_4-10s.mp4` — seedance-2.5 (edición de vídeo), tramo 4–10 s, 1,56 $. Entradas: avatar B (solo cara) + collar_en_mano + collar_en_cuello, `duration -1`, `aspect_ratio adaptive`. Prompt: sustituir a la chica por la avatar con SU tono de piel en todo lo visible, cambiar el collar por el de las imágenes, "remove ALL subtitles/captions", envases sin marcas. ✅ Quitó todos los subtítulos, cambió cara/pelo/piel y mantuvo escena y movimientos. ≈0,26 $/s.
+
+## Vídeo unido v1 (Higgsfield, Seedance 2.5)
+`final/auvie_unido_v1.mp4` = Higgsfield intento 1 (0–4,6 s y 10,9–13,5 s) + P1 (caras, 4,6–10,9 s) + P2 (13,5–fin). Subtítulos eliminados en todo. Pendiente: marcas Chanel/Rhode visibles en los planos de cosméticos (16–18,4 s), restos de pelo moreno en el plano naranja (10,9–12,3 s) y el macro con dedo (13,5–15 s), y tono de piel moreno en cuello/manos. Lección: Higgsfield en "Crear video" no cambia la cara si el vídeo es largo; partir en trozos de ~5-6 s por tipo de plano (con cara / sin cara) funciona.
